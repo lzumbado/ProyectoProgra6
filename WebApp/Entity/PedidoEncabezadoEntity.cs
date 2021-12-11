@@ -10,7 +10,7 @@ namespace Entity
     {
         public PedidoEncabezadoEntity()
         {
-            Clientes = Clientes ?? new ClientesEntity();
+            Cliente = Cliente ?? new ClienteEntity();
         }
 
         public int? IdPedido { get; set; }
@@ -22,7 +22,7 @@ namespace Entity
 
         public DateTime FechaPedido { get; set; } = DateTime.Now;
 
-        public virtual ClientesEntity Clientes { get; set; }
+        public virtual ClienteEntity Cliente { get; set; }
 
         public int? IdCliente { get; set; }
 

@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace WBL
 {
-    public interface IClientesService
+    public interface IClienteService
     {
-        Task<DBEntity> Create(ClientesEntity entity);
-        Task<DBEntity> Delete(ClientesEntity entity);
-        Task<IEnumerable<ClientesEntity>> Get();
-        Task<ClientesEntity> GetById(ClientesEntity entity);
-        Task<DBEntity> Update(ClientesEntity entity);
+        Task<DBEntity> Create(ClienteEntity entity);
+        Task<DBEntity> Delete(ClienteEntity entity);
+        Task<IEnumerable<ClienteEntity>> Get();
+        Task<ClienteEntity> GetById(ClienteEntity entity);
+        Task<DBEntity> Update(ClienteEntity entity);
 
-        Task<IEnumerable<ClientesEntity>> GetLista();
+        Task<IEnumerable<ClienteEntity>> GetLista();
     }
 
-    public class ClientesService : IClientesService
+    public class ClienteService : IClienteService
     {
         private readonly IDataAccess sql;
 
-        public ClientesService(IDataAccess _sql)
+        public ClienteService(IDataAccess _sql)
         {
             sql = _sql;
         }
@@ -34,11 +34,11 @@ namespace WBL
         //Metodo Get
 
 
-        public async Task<IEnumerable<ClientesEntity>> Get()
+        public async Task<IEnumerable<ClienteEntity>> Get()
         {
             try
             {
-                var result = sql.QueryAsync<ClientesEntity>("ObtenerCliente");
+                var result = sql.QueryAsync<ClienteEntity>("ObtenerCliente");
 
                 return await result;
             }
@@ -51,12 +51,12 @@ namespace WBL
 
         }
 
-        public async Task<IEnumerable<ClientesEntity>> GetLista()
+        public async Task<IEnumerable<ClienteEntity>> GetLista()
         {
 
             try
             {
-                var result = sql.QueryAsync<ClientesEntity>("ObtenerCliente");
+                var result = sql.QueryAsync<ClienteEntity>("ObtenerCliente");
 
                 return await result;
             }
@@ -68,11 +68,11 @@ namespace WBL
         }
 
         //Metodo GetById
-        public async Task<ClientesEntity> GetById(ClientesEntity entity)
+        public async Task<ClienteEntity> GetById(ClienteEntity entity)
         {
             try
             {
-                var result = sql.QueryFirstAsync<ClientesEntity>("ObtenerCliente", new
+                var result = sql.QueryFirstAsync<ClienteEntity>("ObtenerCliente", new
                 { entity.IdCliente });
 
                 return await result;
@@ -87,7 +87,7 @@ namespace WBL
 
         //Metodo Create
 
-        public async Task<DBEntity> Create(ClientesEntity entity)
+        public async Task<DBEntity> Create(ClienteEntity entity)
         {
             try
             {
@@ -115,7 +115,7 @@ namespace WBL
         }
 
         //Metodo Update
-        public async Task<DBEntity> Update(ClientesEntity entity)
+        public async Task<DBEntity> Update(ClienteEntity entity)
         {
             try
             {
@@ -143,7 +143,7 @@ namespace WBL
         }
 
         //Metodo Delete
-        public async Task<DBEntity> Delete(ClientesEntity entity)
+        public async Task<DBEntity> Delete(ClienteEntity entity)
         {
             try
             {

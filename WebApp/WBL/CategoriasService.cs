@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace WBL
 {
-    public interface ICategoriasService 
+    public interface ICategoriaService 
     {
-        Task<DBEntity> Create(CategoriasEntity entity);
-        Task<DBEntity> Delete(CategoriasEntity entity);
-        Task<IEnumerable<CategoriasEntity>> Get();
-        Task<CategoriasEntity> GetById(CategoriasEntity entity);
-        Task<DBEntity> Update(CategoriasEntity entity);
+        Task<DBEntity> Create(CategoriaEntity entity);
+        Task<DBEntity> Delete(CategoriaEntity entity);
+        Task<IEnumerable<CategoriaEntity>> Get();
+        Task<CategoriaEntity> GetById(CategoriaEntity entity);
+        Task<DBEntity> Update(CategoriaEntity entity);
 
-        Task<IEnumerable<CategoriasEntity>> GetLista();
+        Task<IEnumerable<CategoriaEntity>> GetLista();
     }
 
-    public class CategoriasService : ICategoriasService
+    public class CategoriaService : ICategoriaService
     {
         private readonly IDataAccess sql;
 
-        public CategoriasService(IDataAccess _sql)
+        public CategoriaService(IDataAccess _sql)
         {
             sql = _sql;
         }
@@ -34,11 +34,11 @@ namespace WBL
         //Metodo Get
 
 
-        public async Task<IEnumerable<CategoriasEntity>> Get()
+        public async Task<IEnumerable<CategoriaEntity>> Get()
         {
             try
             {
-                var result = sql.QueryAsync<CategoriasEntity>("ObtenerCategoria");
+                var result = sql.QueryAsync<CategoriaEntity>("ObtenerCategoria");
 
                 return await result;
             }
@@ -51,12 +51,12 @@ namespace WBL
 
         }
 
-        public async Task<IEnumerable<CategoriasEntity>> GetLista()
+        public async Task<IEnumerable<CategoriaEntity>> GetLista()
         {
 
             try
             {
-                var result = sql.QueryAsync<CategoriasEntity>("ObtenerCategoria");
+                var result = sql.QueryAsync<CategoriaEntity>("ObtenerCategoria");
 
                 return await result;
             }
@@ -68,11 +68,11 @@ namespace WBL
         }
 
         //Metodo GetById
-        public async Task<CategoriasEntity> GetById(CategoriasEntity entity)
+        public async Task<CategoriaEntity> GetById(CategoriaEntity entity)
         {
             try
             {
-                var result = sql.QueryFirstAsync<CategoriasEntity>("ObtenerCategoria", new
+                var result = sql.QueryFirstAsync<CategoriaEntity>("ObtenerCategoria", new
                 { entity.IdCategoria });
 
                 return await result;
@@ -87,7 +87,7 @@ namespace WBL
 
         //Metodo Create
 
-        public async Task<DBEntity> Create(CategoriasEntity entity)
+        public async Task<DBEntity> Create(CategoriaEntity entity)
         {
             try
             {
@@ -109,7 +109,7 @@ namespace WBL
         }
 
         //Metodo Update
-        public async Task<DBEntity> Update(CategoriasEntity entity)
+        public async Task<DBEntity> Update(CategoriaEntity entity)
         {
             try
             {
@@ -132,7 +132,7 @@ namespace WBL
         }
 
         //Metodo Delete
-        public async Task<DBEntity> Delete(CategoriasEntity entity)
+        public async Task<DBEntity> Delete(CategoriaEntity entity)
         {
             try
             {

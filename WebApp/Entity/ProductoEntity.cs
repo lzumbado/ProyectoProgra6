@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class ProductosEntity : DBEntity
+    public class ProductoEntity : DBEntity
     {
-        public ProductosEntity()
+        public ProductoEntity()
         {
-            Categorias = Categorias ?? new CategoriasEntity();
+            Categoria = Categoria ?? new CategoriaEntity();
         }
         public int? IdProducto { get; set; }
         public string NombreProducto{ get; set; }
@@ -20,7 +20,7 @@ namespace Entity
         public string Caracteristicas { get; set; }
         public Boolean Estado { get; set; }
 
-        public virtual CategoriasEntity Categorias { get; set; }
+        public virtual CategoriaEntity Categoria { get; set; }
 
         public int? IdCategoria { get; set; }
 

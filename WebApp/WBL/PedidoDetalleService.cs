@@ -38,7 +38,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<PedidoDetalleEntity,PedidoEncabezadoEntity, ProductosEntity>("ObtenerPedido", "IdDetalle,IdPedido,IdProducto");
+                var result = sql.QueryAsync<PedidoDetalleEntity,PedidoEncabezadoEntity, ProductoEntity>("ObtenerPedido", "IdDetalle,IdPedido,IdProducto");
 
                 return await result;
             }
@@ -154,10 +154,6 @@ namespace WBL
             }
 
         }
-
-
-
-
 
 
         #endregion
