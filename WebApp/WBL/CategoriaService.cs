@@ -94,7 +94,7 @@ namespace WBL
                 var result = sql.ExecuteAsync("InsertarCategoria", new
                 {
                     entity.IdCategoria,
-                    entity.Categoria,
+                    entity.Categoria
                    
                 });
 
@@ -116,7 +116,7 @@ namespace WBL
                 var result = sql.ExecuteAsync("ActualizarCategoria", new
                 {
                     entity.IdCategoria,
-                    entity.Categoria,             
+                    entity.Categoria             
 
 
                 });

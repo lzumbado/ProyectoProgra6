@@ -14,7 +14,7 @@ namespace Entity
         }
         public int? IdProducto { get; set; }
         public string NombreProducto{ get; set; }
-        public Decimal Identificacion { get; set; }
+        public Decimal Precio { get; set; }
 
         public int? CantidadDisponible { get; set; }
         public string Caracteristicas { get; set; }
