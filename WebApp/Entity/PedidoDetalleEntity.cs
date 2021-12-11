@@ -11,11 +11,12 @@ namespace Entity
         public PedidoDetalleEntity()
         {
             PedidoEncabezado = PedidoEncabezado ?? new PedidoEncabezadoEntity();
+
             Productos = Productos ?? new ProductosEntity();
         }
         public int? IdDetalle { get; set; }
         public int? Cantidad { get; set; }
-        public virtual PedidoEncabezado PedidoEncabezado { get; set; }
+        public virtual PedidoEncabezadoEntity PedidoEncabezado { get; set; }
         public int? IdPedido { get; set; }
         public virtual Productos Productos { get; set; }
         public int? IdProducto { get; set; }
