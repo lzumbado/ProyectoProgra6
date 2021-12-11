@@ -18,7 +18,7 @@ namespace Entity
         public int? Cantidad { get; set; }
         public virtual PedidoEncabezadoEntity PedidoEncabezado { get; set; }
         public int? IdPedido { get; set; }
-        public virtual Productos Productos { get; set; }
+        public virtual ProductosEntity Productos { get; set; }
         public int? IdProducto { get; set; }
 
 
