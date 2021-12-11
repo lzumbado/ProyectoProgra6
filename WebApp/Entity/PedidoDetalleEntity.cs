@@ -22,5 +22,6 @@ namespace Entity
         public int? IdProducto { get; set; }
 
 
+
     }
 }

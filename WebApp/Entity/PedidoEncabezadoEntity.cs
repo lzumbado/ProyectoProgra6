@@ -17,7 +17,7 @@ namespace Entity
         public int? Envio{ get; set; }
 
         public int? SubTotal { get; set; }
-
+        public int? Impuesto { get; set; }
         public int? Total { get; set; }
 
         public DateTime FechaPedido { get; set; } = DateTime.Now;
