@@ -10,6 +10,12 @@ namespace WBL
 {
     public interface ICategoriasService 
     {
+        Task<DBEntity> Create(CategoriasEntity entity);
+        Task<DBEntity> Delete(CategoriasEntity entity);
+        Task<IEnumerable<CategoriasEntity>> Get();
+        Task<CategoriasEntity> GetById(CategoriasEntity entity);
+        Task<DBEntity> Update(CategoriasEntity entity);
+
         Task<IEnumerable<CategoriasEntity>> GetLista();
     }
 
