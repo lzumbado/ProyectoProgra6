@@ -14,9 +14,9 @@ namespace App.AxiosProvider   {
     export const SeguridadEliminar = (id) => axios.delete<DBEntity>("Seguridad/Grid?handler=Eliminar&id=" + id).then(({ data }) => data);
     export const SeguridadGuardar = (entity) => axios.post<DBEntity>("Seguridad/Edit", entity).then(({ data }) => data);
 
-    //export const EmpleadoEliminar = (id) => ServiceApi.delete<DBEntity>("api/Empleado/" + id).then(({ data }) => data);
-    //export const EmpleadoGuardar = (entity) => ServiceApi.post<DBEntity>("api/Empleado", entity).then(({ data }) => data);
-    //export const EmpleadoActualizar = (entity) => ServiceApi.put<DBEntity>("api/Empleado", entity).then(({ data }) => data);
+    export const PedidoEliminar = (id) => ServiceApi.delete<DBEntity>("api/Pedido/" + id).then(({ data }) => data);
+    export const PedidoGuardar = (entity) => ServiceApi.post<DBEntity>("api/Pedido", entity).then(({ data }) => data);
+    export const PedidoActualizar = (entity) => ServiceApi.put<DBEntity>("api/Pedido", entity).then(({ data }) => data);
 
 
 }
