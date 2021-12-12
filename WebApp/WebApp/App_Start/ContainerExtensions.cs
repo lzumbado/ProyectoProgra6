@@ -16,6 +16,7 @@ namespace WebApp
 
             services.AddSingleton<IDataAccess, DataAccess>();            
             services.AddTransient<ICategoriaService, CategoriaService>();
+            services.AddTransient<IClienteService, ClienteService>();
 
             return services;
         }

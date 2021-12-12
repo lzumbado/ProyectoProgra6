@@ -1,4 +1,4 @@
-﻿namespace CategoriaGrid {
+﻿namespace ClienteGrid {
 
     export function OnClickEliminar(id) {
 
@@ -6,7 +6,7 @@
             .then(result => {
                 if (result.isConfirmed) {
                     Loading.fire("Borrando");
-                    App.AxiosProvider.CategoriaEliminar(id).then(data => {
+                    App.AxiosProvider.ClienteEliminar(id).then(data => {
                         Loading.close();
 
                         if (data.CodeError == 0) {

@@ -8,6 +8,8 @@
   <ItemGroup>
     <Content Remove="wwwroot\App\Categoria\Edit.ts" />
     <Content Remove="wwwroot\App\Categoria\Grid.ts" />
+    <Content Remove="wwwroot\App\Cliente\Edit.ts" />
+    <Content Remove="wwwroot\App\Cliente\Grid.ts" />
     <Content Remove="wwwroot\App\Contrato\Edit.ts" />
     <Content Remove="wwwroot\App\Contrato\Grid.ts" />
     <Content Remove="wwwroot\App\Empleado\Edit.ts" />
@@ -78,6 +80,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\App\Categoria\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Categoria\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Cliente\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Cliente\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Contrato\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Contrato\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Empleado\Edit.ts" />
