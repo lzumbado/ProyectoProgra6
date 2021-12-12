@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[InsertarSeguridad]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[InsertarSeguridad]
     @NombreUsuario VARCHAR(250),
     @Usuario varchar(50),
     @Contrasena varchar(50)

@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[EliminarPedido]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[EliminarPedido]
  @IdPedido int
 
 

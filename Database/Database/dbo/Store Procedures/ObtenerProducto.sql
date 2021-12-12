@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ObtenerProducto]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[ObtenerProducto]
       @IdProducto int= NULL
 AS BEGIN
   SET NOCOUNT ON

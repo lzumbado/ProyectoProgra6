@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[PedidoDetalle]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE TABLE [dbo].[PedidoDetalle]
 (
 	[IdDetalle] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_PedidoDetalle PRIMARY KEY CLUSTERED(IdDetalle)
    ,Cantidad Int,

@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[Productos]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE TABLE [dbo].[Productos]
 (
 	IdProducto INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_Producto PRIMARY KEY CLUSTERED(IdProducto),
 	NombreProducto varchar(250) NOT NULL,
