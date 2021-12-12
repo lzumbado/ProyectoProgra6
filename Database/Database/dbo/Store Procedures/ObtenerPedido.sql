@@ -20,9 +20,9 @@ AS BEGIN
      C.Telefono,
      P.NombreProducto,
      P.Precio
-    FROM dbo.PedidoEncabezado A INNER JOIN dbo.PedidoDetalle B ON A.IdPedido=B.IdPedido,
-     dbo.PedidoEncabezado AX INNER JOIN dbo.Clientes C ON AX.IdCliente=C.IdCliente,
-     dbo.PedidoDetalle BX INNER JOIN dbo.Productos P ON BX.IdProducto=P.IdProducto
+    FROM dbo.PedidoEncabezado A INNER JOIN dbo.PedidoDetalle B ON A.IdPedido=B.IdPedido
+     INNER JOIN dbo.Clientes C ON A.IdCliente=C.IdCliente
+     INNER JOIN dbo.Productos P ON B.IdProducto=P.IdProducto
     WHERE
     (@IdPedido IS NULL OR A.IdPedido=@IdPedido)
 
