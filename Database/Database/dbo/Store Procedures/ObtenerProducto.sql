@@ -10,8 +10,11 @@ AS BEGIN
 	 P.CantidadDisponible,
 	 P.Caracteristicas,
 	 P.Estado,
-	 P.IdCategoria
-    FROM dbo.Productos P
+	 P.IdCategoria,
+
+	 B.Categoria
+	 
+    FROM dbo.Productos P INNER JOIN dbo.Categorias B ON P.IdCategoria=B.IdCategoria
     WHERE
     (@IdProducto IS NULL OR IdProducto=@IdProducto)
 
