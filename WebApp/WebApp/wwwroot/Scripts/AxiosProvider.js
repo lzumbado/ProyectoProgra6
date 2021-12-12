@@ -27,6 +27,14 @@ var App;
             var data = _a.data;
             return data;
         }); };
+        AxiosProvider.SeguridadEliminar = function (id) { return axios.delete("Seguridad/Grid?handler=Eliminar&id=" + id).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
+        AxiosProvider.SeguridadGuardar = function (entity) { return axios.post("Seguridad/Edit", entity).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
         //export const EmpleadoEliminar = (id) => ServiceApi.delete<DBEntity>("api/Empleado/" + id).then(({ data }) => data);
         //export const EmpleadoGuardar = (entity) => ServiceApi.post<DBEntity>("api/Empleado", entity).then(({ data }) => data);
         //export const EmpleadoActualizar = (entity) => ServiceApi.put<DBEntity>("api/Empleado", entity).then(({ data }) => data);

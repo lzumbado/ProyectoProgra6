@@ -1,5 +1,5 @@
 ﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[EliminarCategoria]
+CREATE PROCEDURE [dbo].[EliminarSeguridad]
  @IdSeguridad int
 
 
