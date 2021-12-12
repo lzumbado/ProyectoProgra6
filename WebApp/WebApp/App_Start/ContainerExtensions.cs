@@ -14,10 +14,8 @@ namespace WebApp
         public static IServiceCollection AddDIContainer(this IServiceCollection services)
         {
 
-            services.AddSingleton<IDataAccess, DataAccess>();
-            services.AddTransient<IEmpleadoService, EmpleadoService>();
-            services.AddTransient<ITipoIdentificacionService, CategoriasService>();
-            services.AddTransient<IContratoService, ContratoService>();
+            services.AddSingleton<IDataAccess, DataAccess>();            
+            services.AddTransient<ICategoriaService, CategoriaService>();
 
             return services;
         }
