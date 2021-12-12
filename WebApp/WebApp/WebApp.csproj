@@ -10,10 +10,6 @@
     <Content Remove="wwwroot\App\Categoria\Grid.ts" />
     <Content Remove="wwwroot\App\Cliente\Edit.ts" />
     <Content Remove="wwwroot\App\Cliente\Grid.ts" />
-    <Content Remove="wwwroot\App\Contrato\Edit.ts" />
-    <Content Remove="wwwroot\App\Contrato\Grid.ts" />
-    <Content Remove="wwwroot\App\Empleado\Edit.ts" />
-    <Content Remove="wwwroot\App\Empleado\Grid.ts" />
     <Content Remove="wwwroot\App\Producto\Edit.ts" />
     <Content Remove="wwwroot\App\Producto\Grid.ts" />
   </ItemGroup>
@@ -84,10 +80,6 @@
     <TypeScriptCompile Include="wwwroot\App\Categoria\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Cliente\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Cliente\Grid.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Contrato\Edit.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Contrato\Grid.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Empleado\Edit.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Empleado\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Producto\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Producto\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />

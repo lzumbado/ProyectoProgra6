@@ -1,47 +1,47 @@
-﻿using Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿//using Entity;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Net.Http;
+//using System.Threading.Tasks;
 
-namespace WebApp
-{
-    public class ServiceApi
-    {
-        private readonly HttpClient client;
+//namespace WebApp
+//{
+//    public class ServiceApi
+//    {
+//        private readonly HttpClient client;
 
-        public ServiceApi(HttpClient client)
-        {
-            this.client = client;
-        }
-
-
-        public async Task<IEnumerable<EmpleadoEntity>> EmpleadoGet()
-        {
-
-            var result = await client.ServicioGetAsync<IEnumerable<EmpleadoEntity>>("api/Empleado");
-            return result;
-
-        }
+//        public ServiceApi(HttpClient client)
+//        {
+//            this.client = client;
+//        }
 
 
-        public async Task<EmpleadoEntity> EmpleadoGetById(int id)
-        {
-            var result = await client.ServicioGetAsync<EmpleadoEntity>("api/Empleado/" + id);
+//        public async Task<IEnumerable<EmpleadoEntity>> EmpleadoGet()
+//        {
 
-            if (result.CodeError is not 0) throw new Exception(result.MsgError);
+//            var result = await client.ServicioGetAsync<IEnumerable<EmpleadoEntity>>("api/Empleado");
+//            return result;
 
-            return result;
+//        }
 
-        }
 
-        public async Task<IEnumerable<TipoIdentificacionEntity>> TipoIdentificacionGetLista()
-        {
+//        public async Task<EmpleadoEntity> EmpleadoGetById(int id)
+//        {
+//            var result = await client.ServicioGetAsync<EmpleadoEntity>("api/Empleado/" + id);
 
-            var result = await client.ServicioGetAsync<IEnumerable<TipoIdentificacionEntity>>("api/TipoIdentificacion/Lista");
-            return result;
+//            if (result.CodeError is not 0) throw new Exception(result.MsgError);
 
-        }
-    }
-}
+//            return result;
+
+//        }
+
+//        public async Task<IEnumerable<TipoIdentificacionEntity>> TipoIdentificacionGetLista()
+//        {
+
+//            var result = await client.ServicioGetAsync<IEnumerable<TipoIdentificacionEntity>>("api/TipoIdentificacion/Lista");
+//            return result;
+
+//        }
+//    }
+//}

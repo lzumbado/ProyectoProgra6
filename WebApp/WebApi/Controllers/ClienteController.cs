@@ -6,58 +6,59 @@ using System.Linq;
 using System.Threading.Tasks;
 using WBL;
 using Entity;
+
+
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpleadoController : ControllerBase
+    public class ClienteController : ControllerBase
     {
-        private readonly IEmpleadoService empleadoService;
+        private readonly IClienteService clienteService;
 
-        public EmpleadoController(IEmpleadoService empleadoService)
+        public ClienteController(IClienteService clienteService)
         {
-            this.empleadoService = empleadoService;
+            this.clienteService = clienteService;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<EmpleadoEntity>> Get()
+        public async Task<IEnumerable<ClienteEntity>> Get()
         {
             try
             {
-                return await empleadoService.Get();
+                return await clienteService.Get();
             }
             catch (Exception ex)
             {
 
-                return new List<EmpleadoEntity>();
-            }       
-        
-        
-        }
-
-        [HttpGet("{id}")]
-        public async Task<EmpleadoEntity> Get(int id)
-        {
-            try
-            {
-                return await empleadoService.GetById( new EmpleadoEntity { IdEmpleado= id});
-            }
-            catch (Exception ex)
-            {
-
-                return new EmpleadoEntity { CodeError = ex.HResult, MsgError = ex.Message };
+                return new List<ClienteEntity>();
             }
 
 
         }
 
+        [HttpGet("{id}")]
+        public async Task<ClienteEntity> Get(int id)
+        {
+            try
+            {
+                return await clienteService.GetById(new ClienteEntity { IdCliente = id });
+            }
+            catch (Exception ex)
+            {
+
+                return new ClienteEntity { CodeError = ex.HResult, MsgError = ex.Message };
+            }
+
+
+        }
 
         [HttpPost]
-        public async Task<DBEntity> Create(EmpleadoEntity entity)
+        public async Task<DBEntity> Create(ClienteEntity entity)
         {
             try
             {
-                return await empleadoService.Create(entity);
+                return await clienteService.Create(entity);
             }
             catch (Exception ex)
             {
@@ -68,13 +69,12 @@ namespace WebApi.Controllers
 
         }
 
-
         [HttpPut]
-        public async Task<DBEntity> Update(EmpleadoEntity entity)
+        public async Task<DBEntity> Update(ClienteEntity entity)
         {
             try
             {
-                return await empleadoService.Update(entity);
+                return await clienteService.Update(entity);
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                return await empleadoService.Delete(new EmpleadoEntity() { IdEmpleado = id });
+                return await clienteService.Delete(new ClienteEntity() { IdCliente = id });
             }
             catch (Exception ex)
             {
@@ -100,9 +100,6 @@ namespace WebApi.Controllers
 
 
         }
-
-
-
 
 
     }
