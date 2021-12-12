@@ -5,6 +5,7 @@ AS BEGIN
   SET NOCOUNT ON
 
   SELECT 
+     IdSeguridad,
      NombreUsuario,
 	 Usuario,
      Contrasena
