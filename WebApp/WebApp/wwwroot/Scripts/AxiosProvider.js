@@ -3,12 +3,11 @@ var App;
 (function (App) {
     var AxiosProvider;
     (function (AxiosProvider) {
-        //export const GuardarEmpleado = () => axios.get<Entity.DBEntity>("aplicacion").then(({data})=>data );
-        AxiosProvider.ContratoEliminar = function (id) { return axios.delete("Contrato/Grid?handler=Eliminar&id=" + id).then(function (_a) {
+        AxiosProvider.CategoriaEliminar = function (id) { return axios.delete("Categoria/Grid?handler=Eliminar&id=" + id).then(function (_a) {
             var data = _a.data;
             return data;
         }); };
-        AxiosProvider.ContratoGuardar = function (entity) { return axios.post("Contrato/Edit", entity).then(function (_a) {
+        AxiosProvider.CategoriaGuardar = function (entity) { return axios.post("Categoria/Edit", entity).then(function (_a) {
             var data = _a.data;
             return data;
         }); };
