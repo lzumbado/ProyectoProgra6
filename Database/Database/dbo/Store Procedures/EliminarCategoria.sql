@@ -1,6 +1,6 @@
 ﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[EliminarCategoria]
- @IdSeguridad int
+CREATE PROCEDURE [dbo].[EliminarSeguridad]
+ @IdCategoria int
 
 
 AS BEGIN
@@ -9,7 +9,7 @@ SET NOCOUNT ON
   BEGIN TRANSACTION TRASA
 
     BEGIN TRY
-            DELETE FROM dbo.Seguridad WHERE IdSeguridad=@IdSeguridad
+            DELETE FROM dbo.Categorias WHERE IdCategoria=@IdCategoria
 	
 	  COMMIT TRANSACTION TRASA
 	  SELECT 0 AS CodeError, '' AS MsgError

@@ -75,7 +75,7 @@
     <Build Include="dbo\Store Procedures\ObtenerCliente.sql" />
     <Build Include="dbo\Store Procedures\ActualizarCategoria.sql" />
     <Build Include="dbo\Store Procedures\InsertarCategoria.sql" />
-    <Build Include="dbo\Store Procedures\EliminarCategoria.sql" />
+    <Build Include="dbo\Store Procedures\EliminarSeguridad.sql" />
     <Build Include="dbo\Store Procedures\ObtenerCategoria.sql" />
     <Build Include="dbo\Store Procedures\ActualizarProducto.sql" />
     <Build Include="dbo\Store Procedures\InsertarProducto.sql" />
@@ -83,7 +83,7 @@
     <Build Include="dbo\Store Procedures\ObtenerProducto.sql" />
     <Build Include="dbo\Store Procedures\InsertarSeguridad.sql" />
     <Build Include="dbo\Store Procedures\ActualizarSeguridad.sql" />
-    <Build Include="dbo\Store Procedures\EliminarSeguridad.sql" />
+    <Build Include="dbo\Store Procedures\EliminarCategoria.sql" />
     <Build Include="dbo\Store Procedures\ObtenerSeguridad.sql" />
     <Build Include="dbo\Store Procedures\InsertarPedido.sql" />
     <Build Include="dbo\Store Procedures\ActualizarPedido.sql" />
