@@ -1,7 +1,6 @@
 ﻿/*Author Ismael Umaña 10-12-2021*/
 CREATE PROCEDURE [dbo].[InsertarProducto]
 	@NombreProducto varchar(250),
-	@Precio decimal,
 	@CantidadDisponible int,
 	@Caracteristicas varchar(250),
 	@Estado bit,
@@ -16,7 +15,6 @@ AS BEGIN
 	
 	INSERT INTO dbo.Productos
 	(NombreProducto,
-	Precio,
 	CantidadDisponible,
 	Caracteristicas,
 	Estado,
@@ -25,7 +23,6 @@ AS BEGIN
 	VALUES
 	(
 	@NombreProducto,
-	@Precio,
 	@CantidadDisponible,
 	@Caracteristicas,
 	@Estado,

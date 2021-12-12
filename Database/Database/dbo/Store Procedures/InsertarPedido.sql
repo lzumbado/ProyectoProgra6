@@ -7,6 +7,7 @@ CREATE PROCEDURE [dbo].[InsertarPedido]
    @FechaPedido date,
    @IdCliente int,
    @Cantidad int,
+   @Precio decimal,
    @IdPedido int,
    @IdProducto int
 
@@ -38,12 +39,14 @@ SET NOCOUNT ON
 
 	INSERT INTO dbo.PedidoDetalle
 	(Cantidad,
+	Precio,
 	IdPedido,
 	IdProducto
 	)
 	VALUES
 	(
     @Cantidad,
+	@Precio,
     @IdPedido,
     @IdProducto
 	)

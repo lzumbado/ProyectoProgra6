@@ -7,6 +7,7 @@ CREATE PROCEDURE [dbo].[ActualizarPedido]
    @FechaPedido date,
    @IdCliente int,
    @Cantidad int,
+   @Precio decimal,
    @IdPedido int,
    @IdProducto int
 
@@ -30,6 +31,7 @@ SET NOCOUNT ON
 
 	UPDATE dbo.PedidoDetalle SET
 	 Cantidad=@Cantidad,
+	 Precio=@Precio,
 	 IdProducto=@IdProducto
 	WHERE 
 	       IdPedido=@IdPedido

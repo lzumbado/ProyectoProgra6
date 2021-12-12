@@ -15,13 +15,14 @@ AS BEGIN
      A.IdCliente,
      B.IdDetalle,
      B.Cantidad,
+     B.Precio,
      B.IdProducto,
      C.Nombre,
      C.Apellido1,
      C.Apellido2,
      C.Telefono,
-     P.NombreProducto,
-     P.Precio
+     P.NombreProducto
+
     FROM dbo.PedidoEncabezado A INNER JOIN dbo.PedidoDetalle B ON A.IdPedido=B.IdPedido
      INNER JOIN dbo.Clientes C ON A.IdCliente=C.IdCliente
      INNER JOIN dbo.Productos P ON B.IdProducto=P.IdProducto

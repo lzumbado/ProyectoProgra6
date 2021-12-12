@@ -7,7 +7,6 @@ AS BEGIN
   SELECT 
      P.IdProducto,
 	 P.NombreProducto,
-	 P.Precio,
 	 P.CantidadDisponible,
 	 P.Caracteristicas,
 	 P.Estado,

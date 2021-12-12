@@ -2,7 +2,6 @@
 CREATE PROCEDURE [dbo].[ActualizarProducto]
     @IdProducto int,
 	@NombreProducto varchar(250),
-	@Precio Decimal,
 	@CantidadDisponible Int,
 	@Caracteristicas varchar(250),
 	@Estado bit,
@@ -17,7 +16,6 @@ SET NOCOUNT ON
 	
 	UPDATE dbo.Productos SET
 	 NombreProducto=@NombreProducto,
-	 Precio=@Precio,
 	 CantidadDisponible=@CantidadDisponible,
 	 Caracteristicas=@Caracteristicas,
 	 Estado=@Estado,

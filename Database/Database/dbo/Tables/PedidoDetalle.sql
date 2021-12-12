@@ -3,6 +3,7 @@ CREATE TABLE [dbo].[PedidoDetalle]
 (
 	[IdDetalle] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_PedidoDetalle PRIMARY KEY CLUSTERED(IdDetalle)
    ,Cantidad Int,
+	Precio decimal,
 	IdPedido int NOT NULL
 	   CONSTRAINT FK_PedidoDetalle_PedidoEncabezado FOREIGN KEY(IdPedido) REFERENCES dbo.PedidoEncabezado(IdPedido),
 	IdProducto int NOT NULL
