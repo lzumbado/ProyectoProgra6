@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ActualizarProducto]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[ActualizarProducto]
     @IdProducto int,
 	@NombreProducto varchar(250),
 	@Precio Decimal,

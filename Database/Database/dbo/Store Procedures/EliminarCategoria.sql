@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[EliminarCategoria]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[EliminarCategoria]
  @IdSeguridad int
 
 

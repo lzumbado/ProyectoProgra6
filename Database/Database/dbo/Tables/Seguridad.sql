@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[Seguridad]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE TABLE [dbo].[Seguridad]
 (
 	[IdSeguridad] INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_Seguridad PRIMARY KEY CLUSTERED(IdSeguridad)
    ,NombreUsuario VARCHAR(250) NOT NULL,

@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ObtenerCliente]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[ObtenerCliente]
       @IdCliente int= NULL
 AS BEGIN
   SET NOCOUNT ON

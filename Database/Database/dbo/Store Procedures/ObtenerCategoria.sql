@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ObtenerCategoria]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[ObtenerCategoria]
       @IdCategoria int= NULL
 AS BEGIN
   SET NOCOUNT ON

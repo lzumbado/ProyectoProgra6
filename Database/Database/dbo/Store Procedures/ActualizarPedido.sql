@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ActualizarPedido]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[ActualizarPedido]
    @Envio Int,
    @SubTotal Int,
    @Impuesto Int,

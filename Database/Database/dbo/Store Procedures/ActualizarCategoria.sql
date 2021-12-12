@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[ActualizarCategoria]
+﻿/*Author Ismael Umaña*/
+CREATE PROCEDURE [dbo].[ActualizarCategoria]
     @IdCategoria int,
 	@Categoria varchar(250)
 

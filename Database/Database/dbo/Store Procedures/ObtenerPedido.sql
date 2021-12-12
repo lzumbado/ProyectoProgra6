@@ -1,4 +1,6 @@
-﻿CREATE PROCEDURE [dbo].[ObtenerPedido]
+﻿/*Author Ismael Umaña 10-12-2021*/
+/*Modificado JOINs Ismael Umaña 11-12-2021*/
+CREATE PROCEDURE [dbo].[ObtenerPedido]
       @IdPedido int
 AS BEGIN
   SET NOCOUNT ON

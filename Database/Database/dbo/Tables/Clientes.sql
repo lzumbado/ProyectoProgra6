@@ -1,4 +1,5 @@
-﻿CREATE TABLE [dbo].[Clientes]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE TABLE [dbo].[Clientes]
 (
 	IdCliente INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_Cliente PRIMARY KEY CLUSTERED(IdCliente),
 	Cedula INT UNIQUE NOT NULL,

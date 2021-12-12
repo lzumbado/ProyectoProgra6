@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[InsertarCliente]
+﻿/*Author Ismael Umaña 10-12-2021*/
+CREATE PROCEDURE [dbo].[InsertarCliente]
 	@Cedula Int,
 	@Nombre varchar(50),
 	@Apellido1 varchar(50),
