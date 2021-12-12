@@ -18,12 +18,12 @@ namespace Entity
         }
         public int? IdDetalle { get; set; }
         public int? Cantidad { get; set; }
+        public Decimal Precio { get; set; }
         public virtual PedidoEncabezadoEntity PedidoEncabezado { get; set; }
         public int? IdPedido { get; set; }
         public virtual ProductoEntity Producto { get; set; }
         public int? IdProducto { get; set; }
 
-        public Decimal Precio { get; set; }
 
     }
 }

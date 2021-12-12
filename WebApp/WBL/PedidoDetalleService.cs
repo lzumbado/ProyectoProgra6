@@ -95,6 +95,7 @@ namespace WBL
                 {
                     entity.IdDetalle,
                     entity.Cantidad,
+                    entity.Precio,
                     entity.IdPedido,
                     entity.IdProducto,                    
 
@@ -119,6 +120,7 @@ namespace WBL
                 {
                     entity.IdDetalle,
                     entity.Cantidad,
+                    entity.Precio,
                     entity.IdPedido,
                     entity.IdProducto,
 
