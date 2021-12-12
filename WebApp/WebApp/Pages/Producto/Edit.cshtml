@@ -1,0 +1,65 @@
+﻿@page
+@model WebApp.Pages.Producto.EditModel
+@{ }
+
+<div id="AppEdit" class="container" data-entity="@JsonSerializer.Serialize(Model.Entity)" v-cloak>
+    <div class="card">
+        <div class="card-header">
+            @(Model.id.HasValue? "Actualizar": "Nuevo Producto")
+        </div>
+        <div class="card-body">
+            <form id="FormEdit" method="post">
+                <input type="hidden" asp-for="Entity.IdProducto" v-model="Entity.IdContrato" />
+
+
+                <div class="form-group mb-3">
+                    <label for="Entity.IdCategoria" class="form-label">Categoria</label>
+
+                    <select asp-for="Entity.IdCategoria" class="form-select" v-model="Entity.IdCategoria"
+                            asp-items="@(new SelectList(Model.CategoriaLista,"IdCategoria","Categoria"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.NombreProducto" class="form-label">Nombre del Producto</label>
+                    <input type="text" class="form-control" asp-for="Entity.NombreProducto" v-model="Entity.NombreProducto" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.CantidadDisponible" class="form-label">Cantidad Disponible</label>
+                    <input type="number" class="form-control" asp-for="Entity.CantidadDisponible" v-model="Entity.CantidadDisponible" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Caracteristicas" class="form-label">Caracteristicas</label>
+                    <input type="text" class="form-control" asp-for="Entity.Caracteristicas" v-model="Entity.Caracteristicas" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Estado" class="form-label">Estado</label>
+                    <input type="checkbox" class="form-check-input" asp-for="Entity.Estado" v-model="Entity.Estado">
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" @@click="Save" class="btn btn-primary">
+                            @(Model.id.HasValue? "Actualizar": "Agregar")
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+    <script defer src="~/App/Producto/"></script>
+
+
+}

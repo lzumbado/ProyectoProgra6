@@ -19,6 +19,14 @@ var App;
             var data = _a.data;
             return data;
         }); };
+        AxiosProvider.ProductoEliminar = function (id) { return axios.delete("Producto/Grid?handler=Eliminar&id=" + id).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
+        AxiosProvider.ProductoGuardar = function (entity) { return axios.post("Producto/Edit", entity).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
         AxiosProvider.EmpleadoEliminar = function (id) { return ServiceApi.delete("api/Empleado/" + id).then(function (_a) {
             var data = _a.data;
             return data;
