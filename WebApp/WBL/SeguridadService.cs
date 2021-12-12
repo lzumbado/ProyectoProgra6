@@ -93,7 +93,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("InsertarSeguridad", new
                 {
-                    entity.IdSeguridad,
+                   
                     entity.NombreUsuario,
                     entity.Usuario,
                     entity.Contrasena

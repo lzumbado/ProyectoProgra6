@@ -93,7 +93,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("InsertarPedido", new
                 {
-                    entity.IdDetalle,
+                  
                     entity.Cantidad,
                     entity.Precio,
                     entity.IdPedido,

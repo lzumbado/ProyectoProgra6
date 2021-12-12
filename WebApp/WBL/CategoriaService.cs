@@ -93,7 +93,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("InsertarCategoria", new
                 {
-                    entity.IdCategoria,
+                  
                     entity.Categoria
                    
                 });
