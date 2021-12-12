@@ -21,7 +21,7 @@ namespace Entity
         public virtual ProductoEntity Producto { get; set; }
         public int? IdProducto { get; set; }
 
-
+        public Decimal Precio { get; set; }
 
     }
 }
