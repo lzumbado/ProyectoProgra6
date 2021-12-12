@@ -25,7 +25,7 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDIContainer();
-            //services.AddConfigHttpClient(Configuration);
+            //services.AddConfigHttpClient(Configuration); Volver a descomentar y ConfigHttpClient.cs
             services.AddHttpContextAccessor();
 
             services.AddRazorPages().AddJsonOptions(option =>
