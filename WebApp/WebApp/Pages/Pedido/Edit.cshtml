@@ -1,0 +1,106 @@
+﻿@page
+@model WebApp.Pages.Pedido.EditModel
+@{
+}
+<div id="AppEdit" class="container" data-entity="@JsonSerializer.Serialize(Model.Entity)" v-cloak>
+    <div class="card">
+        <div class="card-header">
+            @(Model.id.HasValue? "Actualizar": "Nuevo Pedido")
+        </div>
+        <div class="card-body">
+            <form id="FormEdit" method="post">
+                <input type="hidden" asp-for="Entity.IdPedido" v-model="Entity.IdPedido" />
+
+                <div class="form-group mb-3">
+                    <label for="Entity.FechaPedido" class="form-label">Fecha del Pedido</label>
+                    <b-form-datepicker id="FechaNacimiento" name="FechaPedido" v-model="Entity.FechaPedido" class="form-control" required>
+
+                    </b-form-datepicker>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="Entity.IdCliente" class="form-label">Cliente</label>
+
+                    <select asp-for="Entity.IdCliente" class="form-select" v-model="Entity.IdCategoria"
+                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente","Nombre"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.IdCliente" class="form-label">Cedula</label>
+
+                    <select asp-for="Entity.IdCliente" class="form-select" v-model="Entity.IdCliente"
+                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente","Cedula"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.IdCliente" class="form-label">Telefono</label>
+
+                    <select asp-for="Entity.IdCliente" class="form-select" v-model="Entity.IdCliente"
+                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente","Telefono"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.IdProducto" class="form-label">Producto</label>
+
+                    <select asp-for="Entity.IdProducto" class="form-select" v-model="Entity.IdProducto"
+                            asp-items="@(new SelectList(Model.ProductoLista,"IdProducto","NombreProducto"))" required>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Cantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" asp-for="Entity.Cantidad" v-model="Entity.Cantidad" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Precio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" asp-for="Entity.Precio" v-model="Entity.Precio" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Envio" class="form-label">Costo de Envio</label>
+                    <input type="number" class="form-control" asp-for="Entity.Envio" v-model="Entity.Envio" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.SubTotal" class="form-label">Subtotal</label>
+                    <input type="number" class="form-control" asp-for="Entity.SubTotal" v-model="Entity.SubTotal" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Impuesto" class="form-label">Impuesto</label>
+                    <input type="number" class="form-control" asp-for="Entity.Impuesto" v-model="Entity.Impuesto" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Total" class="form-label">Total</label>
+                    <input type="number" class="form-control" asp-for="Entity.Total" v-model="Entity.Total" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" @@click="Save" class="btn btn-primary">
+                            @(Model.id.HasValue? "Actualizar": "Agregar")
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+    <script defer src="~/App/Pedido/Edit.js"></script>
+
+
+}

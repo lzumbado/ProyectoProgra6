@@ -19,6 +19,7 @@ namespace WebApp
             services.AddTransient<IClienteService, ClienteService>();
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<ISeguridadService, SeguridadService>();
+            services.AddTransient<IPedidoService, PedidoService>();
 
             return services;
         }
