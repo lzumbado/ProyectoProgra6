@@ -24,7 +24,7 @@ var PedidoEdit;
                         Loading.close();
                         if (data.CodeError == 0) {
                             Toast.fire({ title: "Se guardo correctamente", icon: "success" })
-                                .then(function () { return window.location.href = "Empleado/Grid"; });
+                                .then(function () { return window.location.href = "Pedido/Grid"; });
                         }
                         else {
                             Toast.fire({ title: data.MsgError, icon: "error" });

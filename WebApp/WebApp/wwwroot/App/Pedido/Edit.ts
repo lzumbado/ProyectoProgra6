@@ -32,7 +32,7 @@
 
                             if (data.CodeError == 0) {
                                 Toast.fire({ title: "Se guardo correctamente", icon: "success" })
-                                    .then(() => window.location.href = "Empleado/Grid");
+                                    .then(() => window.location.href = "Pedido/Grid");
                             }
                             else {
                                 Toast.fire({ title: data.MsgError, icon: "error" });
