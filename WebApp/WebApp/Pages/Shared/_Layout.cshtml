@@ -1,11 +1,20 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Context;
+
+@{
+    if (!Context.HttpContext.SessionOnline())
+    {
+                    Context.HttpContext.Response.Redirect("/Login");
+    } 
+ }
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>@ViewData["Title"] - WebApp</title>
-   @await Html.PartialAsync("_HeaderPartial")
+    @await Html.PartialAsync("_HeaderPartial")
 </head>
 <body>
 
@@ -31,10 +40,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-page="/Producto/Grid">Producto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-page="/Seguridad/Grid">Seguridad</a>
-                    </li>                    
+                    </li>                   
                 </ul>
             </div>
         </div>

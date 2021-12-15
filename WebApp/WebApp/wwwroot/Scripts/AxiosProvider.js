@@ -27,14 +27,6 @@ var App;
             var data = _a.data;
             return data;
         }); };
-        AxiosProvider.SeguridadEliminar = function (id) { return axios.delete("Seguridad/Grid?handler=Eliminar&id=" + id).then(function (_a) {
-            var data = _a.data;
-            return data;
-        }); };
-        AxiosProvider.SeguridadGuardar = function (entity) { return axios.post("Seguridad/Edit", entity).then(function (_a) {
-            var data = _a.data;
-            return data;
-        }); };
         AxiosProvider.PedidoEliminar = function (id) { return ServiceApi.delete("api/Pedido/" + id).then(function (_a) {
             var data = _a.data;
             return data;
@@ -44,6 +36,14 @@ var App;
             return data;
         }); };
         AxiosProvider.PedidoActualizar = function (entity) { return ServiceApi.put("api/Pedido", entity).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
+        AxiosProvider.UsuarioRegistrar = function (entity) { return ServiceApi.post("api/Usuarios/Registrar", entity).then(function (_a) {
+            var data = _a.data;
+            return data;
+        }); };
+        AxiosProvider.UsuarioLogin = function (entity) { return axios.post("Login", entity).then(function (_a) {
             var data = _a.data;
             return data;
         }); };

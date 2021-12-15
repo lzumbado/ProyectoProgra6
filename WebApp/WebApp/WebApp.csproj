@@ -10,12 +10,12 @@
     <Content Remove="wwwroot\App\Categoria\Grid.ts" />
     <Content Remove="wwwroot\App\Cliente\Edit.ts" />
     <Content Remove="wwwroot\App\Cliente\Grid.ts" />
+    <Content Remove="wwwroot\App\Login.ts" />
     <Content Remove="wwwroot\App\Pedido\Edit.ts" />
     <Content Remove="wwwroot\App\Pedido\Grid.ts" />
     <Content Remove="wwwroot\App\Producto\Edit.ts" />
     <Content Remove="wwwroot\App\Producto\Grid.ts" />
-    <Content Remove="wwwroot\App\Seguridad\Edit.ts" />
-    <Content Remove="wwwroot\App\Seguridad\Grid.ts" />
+    <Content Remove="wwwroot\App\Registrarse.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,12 +84,12 @@
     <TypeScriptCompile Include="wwwroot\App\Categoria\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Cliente\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Cliente\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Login.ts" />
     <TypeScriptCompile Include="wwwroot\App\Pedido\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Pedido\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Producto\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Producto\Grid.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Seguridad\Edit.ts" />
-    <TypeScriptCompile Include="wwwroot\App\Seguridad\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Registrarse.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.ts" />

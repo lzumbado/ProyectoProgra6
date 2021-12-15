@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class SeguridadEntity:DBEntity
+    public class UsuariosEntity : DBEntity
     {
-        public int? IdSeguridad { get; set; }
-        public string NombreUsuario { get; set; }
-
+        public int? UsuariosId { get; set; }
         public string Usuario { get; set; }
+        public string Nombre { get; set; }
         public string Contrasena { get; set; }
-
-
     }
 }

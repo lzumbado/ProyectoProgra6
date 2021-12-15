@@ -19,7 +19,7 @@ namespace WebApi
             services.AddTransient<IClienteService, ClienteService>();
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<IPedidoService, PedidoService>();
-            services.AddTransient<ISeguridadService, SeguridadService>();
+            services.AddTransient<IUsuariosService, UsuariosService>();
             return services;
         }
     }
