@@ -13,6 +13,8 @@ namespace WebApp.Pages.Pedido
     {
         private readonly ServiceApi service;
 
+        //public EditModel(ServiceApi service) => this.service = service;
+
         public EditModel(ServiceApi service)
         {
             this.service = service;
@@ -45,8 +47,8 @@ namespace WebApp.Pages.Pedido
                     Entity = await service.PedidoGetById(id.Value);
                 }
 
-                ProductoLista = await service.ProductoGetLista();
-                ClienteLista = await service.ClienteGetLista();
+                //ProductoLista = await service.ProductoGetLista();
+                //ClienteLista = await service.ClienteGetLista();
 
                 return Page();
             }
