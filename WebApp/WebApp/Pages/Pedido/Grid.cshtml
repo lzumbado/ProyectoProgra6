@@ -38,27 +38,27 @@
                         <tboby>
                             @foreach (var item in Model.GridList)
                             {
-                            <tr>
-                                <td>@item.IdPedido</td>
-                                <td>@item.FechaPedido.ToString("dd/MM/yyyy")</td>
-                                <td>@item.Cliente.Nombre</td>
-                                <td>@item.Cliente.Cedula</td>
-                                <td>@item.Cliente.Telefono</td>
-                                <td>@item.Producto.NombreProducto</td>
-                                <td>@item.Cantidad</td>
-                                <td>@item.Precio</td>
-                                <td>@item.Envio</td>
-                                <td>@item.SubTotal</td>
-                                <td>@item.Impuesto</td>
-                                <td>@item.Total</td>
-                                <td>
-                                    <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdPedido"><i class='bx bx-edit-alt'></i></a>
+                                <tr>
+                                    <td>@item.IdPedido</td>
+                                    <td>@item.FechaPedido.ToString("dd/MM/yyyy")</td>
+                                    <td>@item.Cliente.Nombre</td>
+                                    <td>@item.Cliente.Cedula</td>
+                                    <td>@item.Cliente.Telefono</td>
+                                    <td>@item.Producto.NombreProducto</td>
+                                    <td>@item.Cantidad</td>
+                                    <td>@item.Precio</td>
+                                    <td>@item.Envio</td>
+                                    <td>@item.SubTotal</td>
+                                    <td>@item.Impuesto</td>
+                                    <td>@item.Total</td>
+                                    <td>
+                                        <a class="btn btn-primary" asp-page="Edit" asp-route-id="@item.IdPedido"><i class='bx bx-edit-alt'></i></a>
 
-                                    <button type="button" class="btn btn-danger" onclick="PedidoGrid.OnClickEliminar(@item.IdPedido)">
-                                        <i class='bx bx-trash'></i>
-                                    </button>
-                                </td>
-                            </tr>}
+                                        <button type="button" class="btn btn-danger" onclick="PedidoGrid.OnClickEliminar(@item.IdPedido)">
+                                            <i class='bx bx-trash'></i>
+                                        </button>
+                                    </td>
+                                </tr>}
                         </tboby>
                     </table>
 
@@ -75,5 +75,8 @@
 
 @section Scripts{
 
+
+
     <script defer src="~/App/Pedido/Grid.js"></script>
+
 }
