@@ -19,13 +19,7 @@ namespace WebApp.Pages.Pedido
         }
 
 
-        //private readonly IEmpleadoService empleadoService;
-
-        //public GridModel(IEmpleadoService empleadoService)
-        //{
-        //    this.empleadoService = empleadoService;
-        //}
-
+     
 
         public IEnumerable<PedidoEntity> GridList { get; set; } = new List<PedidoEntity>();
 
@@ -47,56 +41,6 @@ namespace WebApp.Pages.Pedido
             }
 
         }
-        //public string Mensaje { get; set; } = "";
-        //public async Task<IActionResult> OnGet()
-        //{
-
-        //    try
-        //    {
-        //        GridList = await empleadoService.Get();
-
-        //        if (TempData.ContainsKey("Msg"))
-        //        {
-        //            Mensaje = TempData["Msg"] as string;
-        //        }
-
-        //        TempData.Clear();
-
-        //        return Page();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //       return Content(ex.Message) ;
-        //    }
-
-        //}
-
-        //public async Task<IActionResult> OnGetEliminar(int id)
-        //{
-
-        //    try
-        //    {
-        //        var result = await empleadoService.Delete( new() { IdEmpleado= id});
-
-        //        if (result.CodeError!=0)
-        //        {
-        //            throw new Exception(result.MsgError);
-        //        }
-
-        //        TempData["Msg"] = "Se elimino correctamente";
-
-        //        return Redirect("Grid");
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        return Content(ex.Message);
-        //    }
-
-        //}
+   
     }
 }
