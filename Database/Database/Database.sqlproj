@@ -69,6 +69,7 @@
     <Build Include="dbo\Tables\Usuario.sql" />
     <Build Include="dbo\Store Procedures\UsuarioRegistrar.sql" />
     <Build Include="dbo\Store Procedures\Login.sql" />
+    <Build Include="dbo\Store Procedures\ObtenerUsuario.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Store Procedures\InsertarCliente.sql" />

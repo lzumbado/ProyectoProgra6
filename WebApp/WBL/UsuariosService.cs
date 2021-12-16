@@ -12,6 +12,7 @@ namespace WBL
     {
         Task<UsuariosEntity> Login(UsuariosEntity entity);
         Task<DBEntity> Registrar(UsuariosEntity entity);
+        Task<IEnumerable<UsuariosEntity>> Get();
     }
 
     public class UsuariosService : IUsuariosService
@@ -45,6 +46,23 @@ namespace WBL
                 throw;
             }
 
+
+
+        }
+
+        public async Task<IEnumerable<UsuariosEntity>> Get()
+        {
+            try
+            {
+                var result = sql.QueryAsync<UsuariosEntity>("ObtenerUsuario");
+
+                return await result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
 
         }
