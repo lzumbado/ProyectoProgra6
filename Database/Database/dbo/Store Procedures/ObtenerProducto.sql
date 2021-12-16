@@ -11,7 +11,6 @@ AS BEGIN
 	 P.Caracteristicas,
 	 P.Estado,
 	 P.IdCategoria,
-
 	 B.Categoria
 	 
     FROM dbo.Productos P INNER JOIN dbo.Categorias B ON P.IdCategoria=B.IdCategoria

@@ -375,10 +375,6 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="nav-small-cap">
-                            <i class="mdi mdi-dots-horizontal"></i>
-                            <span class="hide-menu">Personal</span>
-                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                                aria-expanded="false">
@@ -388,22 +384,22 @@
                             <ul aria-expanded="false" class="collapse  first-level">
 
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link">
+                                    <a asp-page="/Categoria/Grid" class="sidebar-link">
                                         <i class="mdi mdi-adjust"></i>
-                                        <span class="hide-menu"> Vehiculos </span>
+                                        <span class="hide-menu"> Categorias </span>
                                     </a>
                                 </li>
 
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link">
+                                    <a asp-page="/Cliente/Grid" class="sidebar-link">
                                         <i class="mdi mdi-adjust"></i>
-                                        <span class="hide-menu"> Marcar Vehiculo </span>
+                                        <span class="hide-menu"> Clientes </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link">
+                                    <a asp-page="/Producto/Grid" class="sidebar-link">
                                         <i class="mdi mdi-adjust"></i>
-                                        <span class="hide-menu"> Agencia </span>
+                                        <span class="hide-menu"> Productos </span>
                                     </a>
                                 </li>
 
@@ -411,23 +407,13 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link  waves-effect waves-dark"
+                            <a asp-page="/Pedido/Grid" class="sidebar-link  waves-effect waves-dark"
                                aria-expanded="false">
                                 <i class="mdi mdi-face"></i>
-                                <span class="hide-menu">Clientes </span>
+                                <span class="hide-menu">Pedidos </span>
                             </a>
 
                         </li>
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link  waves-effect waves-dark"
-                               aria-expanded="false">
-                                <i class="mdi mdi-car"></i>
-                                <span class="hide-menu">Alquiler </span>
-                            </a>
-
-                        </li>
-
 
                     </ul>
                 </nav>

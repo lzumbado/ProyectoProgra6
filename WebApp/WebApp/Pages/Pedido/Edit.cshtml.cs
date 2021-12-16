@@ -12,26 +12,20 @@ namespace WebApp.Pages.Pedido
     public class EditModel : PageModel
     {
         private readonly ServiceApi service;
+        private readonly IProductoService productoService;
+        private readonly IClienteService clienteService;
 
-        //public EditModel(ServiceApi service) => this.service = service;
-
-        public EditModel(ServiceApi service)
+        public EditModel(ServiceApi service, IProductoService productoService, IClienteService clienteService)
         {
             this.service = service;
+            this.productoService = productoService;
+            this.clienteService = clienteService;
         }
 
 
-        //private readonly IEmpleadoService empleadoService;
-        //private readonly ITipoIdentificacionService tipoIdentificacionService;
-
-        //public EditModel(IEmpleadoService empleadoService, ITipoIdentificacionService tipoIdentificacionService)
-        //{
-        //    this.empleadoService = empleadoService;
-        //    this.tipoIdentificacionService = tipoIdentificacionService;
-        //}
-
         [BindProperty]
         public PedidoEntity Entity { get; set; } = new PedidoEntity();
+
         public IEnumerable<ProductoEntity> ProductoLista { get; set; } = new List<ProductoEntity>();
         public IEnumerable<ClienteEntity> ClienteLista { get; set; } = new List<ClienteEntity>();
 
@@ -47,8 +41,8 @@ namespace WebApp.Pages.Pedido
                     Entity = await service.PedidoGetById(id.Value);
                 }
 
-                //ProductoLista = await service.ProductoGetLista();
-                //ClienteLista = await service.ClienteGetLista();
+                ProductoLista = await productoService.GetLista();
+                ClienteLista = await clienteService.GetLista();
 
                 return Page();
             }
@@ -60,66 +54,5 @@ namespace WebApp.Pages.Pedido
 
 
         }
-        //public async Task<IActionResult> OnGet()
-        //{
-        //    try
-        //    {
-        //        if (id.HasValue)
-        //        {
-        //            Entity = await empleadoService.GetById(new() { IdEmpleado = id });
-        //        }
-
-        //        TipoIdentificacionLista = await tipoIdentificacionService.GetLista();
-
-        //        return Page();
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        return Content(ex.Message);
-        //    }
-
-
-        //}
-
-        //public async Task<IActionResult> OnPostAsync()
-        //{
-
-        //    try
-        //    {
-        //        Metodo Actualizar
-        //        if (Entity.IdEmpleado.HasValue)
-        //        {
-        //            var result = await empleadoService.Update(Entity);
-
-        //            if (result.CodeError != 0) throw new Exception(result.MsgError);
-        //            TempData["Msg"] = "El registro se ha actualizado";
-        //        }
-        //        else
-        //        {
-        //            var result = await empleadoService.Create(Entity);
-
-        //            if (result.CodeError != 0) throw new Exception(result.MsgError);
-        //            TempData["Msg"] = "El registro se ha insertado";
-        //        }
-
-        //        return RedirectToPage("Grid");
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        return Content(ex.Message);
-        //    }
-
-
-        //}
-
-
-
-
-
-
-
-
     }
 }
