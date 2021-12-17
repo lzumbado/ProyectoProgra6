@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[InsertarCategoria]
+﻿CREATE PROCEDURE [dbo].[InsertarCategoria]
 	@Categoria varchar(250)
 
 AS BEGIN

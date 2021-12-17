@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[EliminarCliente]
+﻿CREATE PROCEDURE [dbo].[EliminarCliente]
  @IdCliente int
 
 

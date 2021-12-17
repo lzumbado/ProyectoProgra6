@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[ActualizarProducto]
+﻿CREATE PROCEDURE [dbo].[ActualizarProducto]
     @IdProducto int,
 	@NombreProducto varchar(250),
 	@CantidadDisponible Int,

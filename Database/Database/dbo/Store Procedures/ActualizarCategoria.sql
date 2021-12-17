@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña*/
-CREATE PROCEDURE [dbo].[ActualizarCategoria]
+﻿CREATE PROCEDURE [dbo].[ActualizarCategoria]
     @IdCategoria int,
 	@Categoria varchar(250)
 

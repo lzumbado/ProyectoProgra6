@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[InsertarPedido]
+﻿CREATE PROCEDURE [dbo].[InsertarPedido]
    @Envio Int,
    @SubTotal Int,
    @Impuesto Int,
@@ -11,9 +10,15 @@ CREATE PROCEDURE [dbo].[InsertarPedido]
    @IdPedido int,
    @IdProducto int
 
+  
+
 
 AS BEGIN
 SET NOCOUNT ON
+
+ Set @SubTotal = @Precio * @Cantidad
+ Set @Impuesto = @SubTotal * 0.13
+ Set @Total = @SubTotal + @Impuesto + @Envio
 
   BEGIN TRANSACTION TRASA
 

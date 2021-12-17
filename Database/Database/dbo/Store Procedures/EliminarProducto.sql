@@ -1,5 +1,4 @@
-﻿/*Author Ismael Umaña 10-12-2021*/
-CREATE PROCEDURE [dbo].[EliminarProducto]
+﻿CREATE PROCEDURE [dbo].[EliminarProducto]
  @IdProducto int
 
 
